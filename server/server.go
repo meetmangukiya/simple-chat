@@ -16,7 +16,7 @@ type Config struct {
 
 func parseFlags() Config {
 	port := flag.Uint("port", 8080, "server port")
-	host := flag.String("host", "localhost", "server host")
+	host := flag.String("host", "0.0.0.0", "server host")
 	flag.Parse()
 
 	return Config{

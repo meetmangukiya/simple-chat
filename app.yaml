@@ -1,0 +1,16 @@
+namespace: /meetmangukiya
+
+app:
+    defines: runnable
+    version: 0.0.1
+    containers:
+        defines: containers
+        app:
+            image: meetmangukiya/simple-chat:latest
+            ports:
+                - <- `${port}:${port}`
+    variables:
+        defines: variables
+        port:
+            type: int
+            value: 8080
