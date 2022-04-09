@@ -1,7 +1,7 @@
 all: server client
 
 server: always
-	cd server; go build -o ../build/server server.go config.go ws.go
+	cd server; go build -o ../build/server server.go ws.go
 
 client: always
 	cd client; go build -o ../build/client client.go
