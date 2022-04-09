@@ -11,14 +11,17 @@ import (
 
 type Config struct {
 	port uint
+	host string
 }
 
 func parseFlags() Config {
 	port := flag.Uint("port", 8080, "server port")
+	host := flag.String("host", "localhost", "server host")
 	flag.Parse()
 
 	return Config{
 		*port,
+		*host,
 	}
 }
 
@@ -30,5 +33,5 @@ func main() {
 	http.Handle("/", r)
 
 	log.Println("server listening on port", config.port)
-	log.Fatal(http.ListenAndServe(fmt.Sprintf("localhost:%d", config.port), nil))
+	log.Fatal(http.ListenAndServe(fmt.Sprintf("%s:%d", config.host, config.port), nil))
 }
