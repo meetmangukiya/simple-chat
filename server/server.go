@@ -15,6 +15,8 @@ type Config struct {
 
 func parseFlags() Config {
 	port := flag.Uint("port", 8080, "server port")
+	flag.Parse()
+
 	return Config{
 		*port,
 	}
