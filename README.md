@@ -34,3 +34,5 @@ make
 1. Implement some form of user authentication.
 2. Implement some form of authorizations for access to rooms.
 3. Moderation features like ability to kick users out.
+4. The client TUI can be made a lot better with some panes and colors.
+5. E2E encryption.
