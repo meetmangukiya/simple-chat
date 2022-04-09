@@ -7,4 +7,4 @@ RUN go mod download && go mod verify
 
 COPY . .
 RUN make server
-CMD ["./build/server"]
+ENTRYPOINT ["./build/server"]
